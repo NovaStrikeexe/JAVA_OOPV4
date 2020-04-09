@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+
+<StackPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.StackController">
+   <children>
+      <Pane fx:id="ClientPanel" disable="true" prefHeight="200.0" prefWidth="200.0" visible="false">
+         <children>
+            <TextField fx:id="nameOfClientTF" layoutX="14.0" layoutY="42.0" />
+            <TextField fx:id="secondnameOfClient" layoutX="14.0" layoutY="101.0" />
+            <TextField fx:id="ageOfClient" layoutX="14.0" layoutY="158.0" prefHeight="25.0" prefWidth="73.0" />
+            <Label layoutX="14.0" layoutY="25.0" text="Name_of_client:" />
+            <Label layoutX="14.0" layoutY="84.0" text="Second_name_of_client:" />
+            <Label layoutX="14.0" layoutY="141.0" text="Age_of_client:" />
+            <RadioButton fx:id="typeOfVisitOneRB" layoutX="14.0" layoutY="192.0" mnemonicParsing="false" text="Type_of_visit: one">
+               <toggleGroup>
+                  <ToggleGroup fx:id="typeOfVisit" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="typeOfVisitAllRB" layoutX="14.0" layoutY="217.0" mnemonicParsing="false" text="Type_of_visit: all" toggleGroup="$typeOfVisit" />
+            <Button fx:id="clickAddClient" layoutX="14.0" layoutY="247.0" mnemonicParsing="false" onAction="#AddClient" text="Add Client" />
+            <Button fx:id="ClearerClient" layoutX="102.0" layoutY="247.0" mnemonicParsing="false" onAction="#ClearerClient" text="Clear all" />
+            <Button layoutX="14.0" layoutY="295.0" mnemonicParsing="false" text="Cancel" />
+            <Button fx:id="ToOfficer" layoutX="93.0" layoutY="295.0" mnemonicParsing="false" onAction="#toOfficer" text="To Officer" />
+         </children>
+      </Pane>
+      <Pane fx:id="OfficerPanel" disable="true" prefHeight="200.0" prefWidth="200.0" visible="false">
+         <children>
+            <TextField fx:id="NameOfficerTF" layoutX="112.0" layoutY="35.0" />
+            <TextField fx:id="SNameOfficerTF" layoutX="151.0" layoutY="78.0" />
+            <TextField fx:id="AgeOfOfficerTF" layoutX="99.0" layoutY="114.0" prefHeight="25.0" prefWidth="84.0" />
+            <TextField fx:id="WorkExperience" layoutX="112.0" layoutY="150.0" />
+            <TextField fx:id="WorkSchedule" layoutX="112.0" layoutY="188.0" />
+            <Button fx:id="clickAddOfficer" layoutX="16.0" layoutY="233.0" mnemonicParsing="false" onAction="#AddOfficer" text="Add Officer" />
+            <Button fx:id="ClearerOfficer" layoutX="16.0" layoutY="270.0" mnemonicParsing="false" onAction="#ClearerOfficer" text="Clear all" />
+            <Button layoutX="16.0" layoutY="307.0" mnemonicParsing="false" text="Cancel" />
+            <Button fx:id="toWepon" layoutX="16.0" layoutY="343.0" mnemonicParsing="false" onAction="#clickToWepon" text="To Wepon" />
+            <Label layoutX="14.0" layoutY="39.0" text="Name of Officer:" />
+            <Label layoutX="14.0" layoutY="82.0" text="Second name of Officer:" />
+            <Label layoutX="14.0" layoutY="118.0" text="Age of Officer:" />
+            <Label layoutX="12.0" layoutY="154.0" text="Work Experience:" />
+            <Label layoutX="16.0" layoutY="192.0" text="Work Schedule:" />
+         </children>
+      </Pane>
+      <Pane fx:id="WeponPanel" prefHeight="400.0" prefWidth="648.0">
+         <children>
+            <TextField fx:id="MarkOfWeponTF" layoutX="14.0" layoutY="59.0" />
+            <TextField fx:id="CalibrOfWeponTF" layoutX="14.0" layoutY="115.0" />
+            <TextField fx:id="AmmoTF" layoutX="14.0" layoutY="168.0" />
+            <Label layoutX="14.0" layoutY="42.0" text="Mark of Wepon:" />
+            <Label layoutX="14.0" layoutY="98.0" text="Calibr of Wepon:" />
+            <Label layoutX="14.0" layoutY="151.0" text="Ammo taken:" />
+            <Button fx:id="AddWepon" layoutX="11.0" layoutY="257.0" mnemonicParsing="false" onAction="#clickAddWepon" text="Add wepon" />
+            <Button fx:id="WeponClealer" layoutX="112.0" layoutY="257.0" mnemonicParsing="false" onAction="#ClearWepon" text="Clear all" />
+            <Button layoutX="14.0" layoutY="297.0" mnemonicParsing="false" text="Cancel" />
+            <Button fx:id="ToListOfAction" layoutX="88.0" layoutY="297.0" mnemonicParsing="false" onAction="#clickToListOfAction" text="Show List Of Action" />
+            <RadioButton fx:id="givenRb" layoutX="15.0" layoutY="200.0" mnemonicParsing="false" text="Given">
+               <toggleGroup>
+                  <ToggleGroup fx:id="ActionTG" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="backedRb" layoutX="15.0" layoutY="223.0" mnemonicParsing="false" prefHeight="8.0" prefWidth="87.0" text="Backed" toggleGroup="$ActionTG" />
+         </children>
+      </Pane>
+      <Pane fx:id="ActionPanel" disable="true" prefHeight="200.0" prefWidth="200.0" visible="false">
+         <children>
+            <TableView fx:id="StatusTabelView" prefHeight="276.0" prefWidth="600.0">
+              <columns>
+                <TableColumn fx:id="ClientTB" prefWidth="170.4000244140625" text="Client_Date" />
+                <TableColumn fx:id="OfficerTB" prefWidth="157.5999755859375" text="Officer_Date" />
+                  <TableColumn fx:id="WeponTB" prefWidth="146.39996337890625" text="Wepon_Date" />
+                  <TableColumn fx:id="StatusTB" prefWidth="124.0" text="Status" />
+              </columns>
+            </TableView>
+            <Button fx:id="addNewNote" layoutX="14.0" layoutY="276.0" mnemonicParsing="false" onAction="#clickAddNewNote" prefHeight="25.0" prefWidth="156.0" text="Add a new note " />
+            <Button fx:id="deleteSelectedNote" layoutX="14.0" layoutY="315.0" mnemonicParsing="false" onAction="#clickDeleteSelectedNote" prefHeight="25.0" prefWidth="156.0" text="Delete selected  note" />
+         </children>
+      </Pane>
+   </children>
+</StackPane>
