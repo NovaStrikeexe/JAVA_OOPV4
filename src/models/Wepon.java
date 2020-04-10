@@ -2,16 +2,26 @@ package models;
 
 import javafx.beans.property.*;
 
-public class Wepon extends EntityClass {
+import javax.persistence.*;
+
+@Entity
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+@Access(AccessType.PROPERTY)
+public class Wepon {
+    private long id;
     private StringProperty mark = new SimpleStringProperty();
     private FloatProperty calibr = new SimpleFloatProperty();
     private IntegerProperty ammo = new SimpleIntegerProperty();
 
-
+    @Id
+    @GeneratedValue(generator="sqlite_person")
+    public long getId() {
+        return id;
+    }
     public String getMark() {
         return mark.get();
     }
-
+    @Transient
     public StringProperty markProperty() {
         return mark;
     }
@@ -23,7 +33,7 @@ public class Wepon extends EntityClass {
     public float getCalibr() {
         return calibr.get();
     }
-
+    @Transient
     public FloatProperty calibrProperty() {
         return calibr;
     }
@@ -31,11 +41,11 @@ public class Wepon extends EntityClass {
     public void setCalibr(float calibr) {
         this.calibr.set(calibr);
     }
-
+    @Transient
     public int getAmmo() {
         return ammo.get();
     }
-
+    @Transient
     public IntegerProperty ammoProperty() {
         return ammo;
     }
@@ -49,7 +59,7 @@ public class Wepon extends EntityClass {
 
 
     public Wepon(){}
-    public Wepon(String mark, Float calibr, Integer ammo) {
+    public Wepon(long id,String mark, Float calibr, Integer ammo) {
         this.mark.set(mark);
         this.calibr.set(calibr);
         this.ammo.set(ammo);

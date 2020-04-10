@@ -3,7 +3,11 @@ package models;
 import javafx.beans.property.ObjectProperty;
 import javafx.beans.property.SimpleObjectProperty;
 
-public class OfficerClientWepon extends EntityClass {
+import javax.persistence.*;
+
+@Entity
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+public class OfficerClientWepon {
     private ObjectProperty<Officer> officer = new SimpleObjectProperty<>();
     private ObjectProperty<Client> client = new SimpleObjectProperty<>();
     private ObjectProperty<Wepon> wepon = new SimpleObjectProperty<>();
@@ -16,7 +20,9 @@ public class OfficerClientWepon extends EntityClass {
         this.action.set(action);
     }
 
-    public Officer getOfficer() { return officer.get(); }
+    public Officer getOfficer() {
+        return officer.get();
+    }
 
     public ObjectProperty<Officer> officerProperty() {
         return officer;

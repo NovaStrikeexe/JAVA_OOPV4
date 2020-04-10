@@ -2,23 +2,33 @@ package models;
 
 import javafx.beans.property.StringProperty;
 
-public class ShootingRange extends EntityClass {
+import javax.persistence.*;
 
+@Entity
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+@Access(AccessType.PROPERTY)
+public class ShootingRange{
+
+    private long id;
     private Officer officer = new Officer();
     private StringProperty shotingGalleryType;
     private int sumOFTargets;
     private int activeTargets;
 
-    public ShootingRange(Officer officer, StringProperty shotingGalleryType, int sumOFTargets, int activeTargets) {
+    public ShootingRange(long id,Officer officer, StringProperty shotingGalleryType, int sumOFTargets, int activeTargets) {
+        this.id = id;
         this.officer = officer;
         this.shotingGalleryType = shotingGalleryType;
         this.sumOFTargets = sumOFTargets;
         this.activeTargets = activeTargets;
     }
-
+    public void setId(long id) { this.id = id; }
     public Officer getOfficer() {
         return officer;
     }
+    @Id
+    @GeneratedValue(generator="sqlite_person")
+    public long getId() { return id; }
 
     public void setOfficer(Officer officer) {
         this.officer = officer;

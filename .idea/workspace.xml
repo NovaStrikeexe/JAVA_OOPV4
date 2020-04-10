@@ -1,20 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b2846a23-7fe8-4f6e-b6b8-c8ad7d27378e" name="Default Changelist" comment="" />
+    <list default="true" id="b2846a23-7fe8-4f6e-b6b8-c8ad7d27378e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/JAVA_OOPV4.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Utils/EntityManagerFactoryUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gateways/EntityClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gateways/SimpleHibernateGateway.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/persistence.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gateways/Gateway.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gateways/Gateway.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gateways/SimpleGateway.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gateways/SimpleGateway.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/Action.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Action.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/EntityClass.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/Human.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Human.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/Officer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Officer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/OfficerClientWepon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/OfficerClientWepon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/ShootingRange.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/ShootingRange.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/Wepon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Wepon.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1aI3UdUuQhh2dAhoLswHpGLvKZM" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -31,16 +64,45 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1586409297555</updated>
+      <workItem from="1586409300115" duration="680000" />
+      <workItem from="1586410847323" duration="527000" />
+      <workItem from="1586493216279" duration="1608000" />
+      <workItem from="1586495053743" duration="3522000" />
+      <workItem from="1586502846608" duration="6952000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="440" y="168" key="#Project_Structure" timestamp="1586409369241">
+    <state x="440" y="168" key="#Project_Structure" timestamp="1586494118508">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="440" y="168" key="#Project_Structure/0.0.1920.1050/1920.21.1680.1020@0.0.1920.1050" timestamp="1586409369241" />
+    <state x="440" y="168" key="#Project_Structure/0.0.1920.1050/1920.21.1680.1020@0.0.1920.1050" timestamp="1586494118508" />
+    <state x="414" y="180" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1586493581854">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="414" y="180" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1050/1920.21.1680.1020@0.0.1920.1050" timestamp="1586493581854" />
+    <state x="765" y="241" key="#com.intellij.ide.util.MemberChooser" timestamp="1586509586373">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="765" y="241" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1050/1920.21.1680.1020@0.0.1920.1050" timestamp="1586509586373" />
+    <state x="743" y="394" width="433" height="268" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1586507478064">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="743" y="394" width="433" height="268" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1920.1050/1920.21.1680.1020@0.0.1920.1050" timestamp="1586507478064" />
+    <state x="690" y="272" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1586495225879">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="690" y="272" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1050/1920.21.1680.1020@0.0.1920.1050" timestamp="1586495225879" />
+    <state x="490" y="180" key="Maven.ArtifactSearchDialog" timestamp="1586504692028">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="490" y="180" key="Maven.ArtifactSearchDialog/0.0.1920.1050/1920.21.1680.1020@0.0.1920.1050" timestamp="1586504692028" />
+    <state x="656" y="349" key="com.intellij.ide.util.TipDialog" timestamp="1586493213367">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="656" y="349" key="com.intellij.ide.util.TipDialog/0.0.1920.1050/1920.21.1680.1020@0.0.1920.1050" timestamp="1586493213367" />
   </component>
 </project>

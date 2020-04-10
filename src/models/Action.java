@@ -3,7 +3,11 @@ package models;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
-public class Action extends EntityClass{
+import javax.persistence.*;
+@Entity
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+public class Action {
+    private int id; //Does it needed?
     private StringProperty name = new SimpleStringProperty();
 
     private Action(String n) {

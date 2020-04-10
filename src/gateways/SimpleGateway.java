@@ -2,7 +2,6 @@ package gateways;
 
 
 import exceptions.EntityNotFound;
-import models.EntityClass;
 
 import java.util.ArrayList;
 import java.util.HashMap;

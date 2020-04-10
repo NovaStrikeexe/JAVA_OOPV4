@@ -1,23 +1,22 @@
 package models;
 
-import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
+import javax.persistence.Entity;
+import javax.persistence.Inheritance;
+import javax.persistence.InheritanceType;
+
+@Entity
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 public class Officer extends Human {
     private StringProperty WorkExperience = new SimpleStringProperty();
     private StringProperty WorkSchedule = new SimpleStringProperty();
 
 
-    public void setWorkExperience(String WorkExperience) {
+    public void setWorkExperience(String WorkExperience) { this.WorkExperience.set(WorkExperience); }
 
-        this.WorkExperience.set(WorkExperience);
-    }
-
-    public void setWorkSchedule(String WorkSchedule) {
-
-        this.WorkSchedule.set(WorkSchedule);
-    }
+    public void setWorkSchedule(String WorkSchedule) { this.WorkSchedule.set(WorkSchedule); }
 
     public StringProperty getWorkExperience() {
         return WorkExperience;
@@ -31,8 +30,7 @@ public class Officer extends Human {
         return super.toString();
     }
 
-    public Officer() {
-    }
+    public Officer() { }
 
     public Officer(String nameofhuman, String snameofhuman, Integer ageofhuman,
                    String WorkExperience, String WorkSchedule) {
