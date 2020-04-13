@@ -1,5 +1,6 @@
 package models;
 
+import gateways.EntityClass;
 import javafx.beans.property.*;
 
 import javax.persistence.*;
@@ -7,17 +8,22 @@ import javax.persistence.*;
 @Entity
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 @Access(AccessType.PROPERTY)
-public class Wepon {
-    private long id;
+public class Wepon implements EntityClass {
+    private int id;
     private StringProperty mark = new SimpleStringProperty();
     private FloatProperty calibr = new SimpleFloatProperty();
     private IntegerProperty ammo = new SimpleIntegerProperty();
 
     @Id
-    @GeneratedValue(generator="sqlite_person")
-    public long getId() {
+    @GeneratedValue(generator="sqlite_wepon")
+    public int getId() {
         return id;
     }
+
+    @Override
+    public void setId(int id) {
+    }
+
     public String getMark() {
         return mark.get();
     }
@@ -59,7 +65,7 @@ public class Wepon {
 
 
     public Wepon(){}
-    public Wepon(long id,String mark, Float calibr, Integer ammo) {
+    public Wepon(String mark, Float calibr, Integer ammo) {
         this.mark.set(mark);
         this.calibr.set(calibr);
         this.ammo.set(ammo);

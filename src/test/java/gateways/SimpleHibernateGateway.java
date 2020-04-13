@@ -1,5 +1,7 @@
+package gateways;
 import Utils.EntityManagerFactoryUtil;
 import exceptions.EntityNotFound;
+import gateways.EntityClass;
 import gateways.Gateway;
 
 import javax.persistence.*;
@@ -7,9 +9,10 @@ import javax.persistence.EntityManagerFactory;
 import java.lang.reflect.ParameterizedType;
 import java.util.List;
 
-public class SimpleHibernateGateway<T> implements Gateway<T> {
-    private EntityManager em = EntityManagerFactoryUtil.geteEntityManager();
-    private Class<T> persistentClass;
+public class SimpleHibernateGateway<T extends EntityClass>  implements Gateway<T> {
+    private final EntityManager em = EntityManagerFactoryUtil.geteEntityManager();
+    private final Class<T> persistentClass;
+
 
     @SuppressWarnings("unchecked")
     public SimpleHibernateGateway(){
@@ -23,7 +26,7 @@ public class SimpleHibernateGateway<T> implements Gateway<T> {
     }
 
     @Override
-    public T find(Long id) throws EntityNotFound {
+    public T find(int id) throws EntityNotFound {
         T person = em.find(persistentClass, id);
         if (person == null)
             throw new EntityNotFound(String.format("Entity with id=%d not found", id ));
@@ -45,9 +48,16 @@ public class SimpleHibernateGateway<T> implements Gateway<T> {
     }
 
     @Override
-    public void delete(T ob) {
+    public void delete(int index) {
         em.getTransaction().begin();
-        em.remove(ob);
+        try {
+            T ob = find(index);
+            em.remove(ob);
+        }
+       catch (EntityNotFound e)
+       {
+
+       }
         em.getTransaction().commit();
     }
 }

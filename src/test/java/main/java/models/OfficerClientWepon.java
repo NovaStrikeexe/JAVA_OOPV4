@@ -1,5 +1,7 @@
 package models;
 
+import gateways.EntityClass;
+import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.ObjectProperty;
 import javafx.beans.property.SimpleObjectProperty;
 
@@ -7,7 +9,8 @@ import javax.persistence.*;
 
 @Entity
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
-public class OfficerClientWepon {
+public class OfficerClientWepon implements EntityClass {
+    private int id;
     private ObjectProperty<Officer> officer = new SimpleObjectProperty<>();
     private ObjectProperty<Client> client = new SimpleObjectProperty<>();
     private ObjectProperty<Wepon> wepon = new SimpleObjectProperty<>();
@@ -67,5 +70,14 @@ public class OfficerClientWepon {
     public void setAction(Action action) {
         this.action.set(action);
     }
+    @Id
+    @Override
+    public int getId() {
+        return id;
+    }
 
+    @Override
+    public void setId(int id) {
+
+    }
 }

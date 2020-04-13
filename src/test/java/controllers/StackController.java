@@ -58,13 +58,13 @@ public class StackController {
     @FXML
     Pane ActionPanel;
     @FXML
-    TableView <OfficerClientWepon> StatusTabelView;
+    TableView<OfficerClientWepon> StatusTabelView;
     @FXML
-    TableColumn<OfficerClientWepon,Client> ClientTB;
+    TableColumn<OfficerClientWepon, Client> ClientTB;
     @FXML
-    TableColumn<OfficerClientWepon,Officer> OfficerTB;
+    TableColumn<OfficerClientWepon, Officer> OfficerTB;
     @FXML
-    TableColumn<OfficerClientWepon,Wepon> WeponTB;
+    TableColumn<OfficerClientWepon, Wepon> WeponTB;
     @FXML
     TableColumn<OfficerClientWepon, Action> StatusTB;
     @FXML
@@ -93,6 +93,8 @@ public class StackController {
     Officer officer;
     Wepon wepon;
     Action action;
+
+
     public void clickAddWepon() {
         String mark = "";
         Float calibr = null;
@@ -125,15 +127,11 @@ public class StackController {
             ammo = Integer.parseInt(AmmoTF.getText());
             flag3++;
         }
-        if(givenRb.isSelected())
-        {
+        if (givenRb.isSelected()) {
             action = Action.getGiving();
-        }
-        else if (backedRb.isSelected())
-        {
-            action =Action.getBacking();
-        }
-        else {
+        } else if (backedRb.isSelected()) {
+            action = Action.getBacking();
+        } else {
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setHeaderText("Action_Error");
             alert.setContentText("Action not given");
@@ -291,8 +289,7 @@ public class StackController {
             clickAddClient.setDisable(true);
             ToOfficer.setDisable(false);
             ToOfficer.requestFocus();
-        }
-        else {
+        } else {
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setHeaderText("Add_client_Error");
             alert.setContentText("Check all fiends for filling");
@@ -328,7 +325,8 @@ public class StackController {
         WeponPanel.setDisable(false);
 
     }
-    public void clickToListOfAction(){
+
+    public void clickToListOfAction() {
         ClientPanel.setVisible(false);
         ClientPanel.setDisable(true);
 
@@ -340,13 +338,13 @@ public class StackController {
 
         ActionPanel.setVisible(true);
         ActionPanel.setDisable(false);
-
-        OfficerClientWepon officerClientWepon = new OfficerClientWepon(officer,client,wepon,action);
+        OfficerClientWepon officerClientWepon = new OfficerClientWepon(officer, client, wepon, action);
         officerClientWepons.add(officerClientWepon);
 
         /*TODO REWORKED class officerClientWepon*/
     }
-    public void clickAddNewNote(){
+
+    public void clickAddNewNote() {
         ClientPanel.setVisible(true);
         ClientPanel.setDisable(false);
 
@@ -358,11 +356,12 @@ public class StackController {
 
         ActionPanel.setVisible(false);
         ActionPanel.setDisable(true);
-        OfficerClientWepon officerClientWepon = new OfficerClientWepon(null,null,null,null);
+        OfficerClientWepon officerClientWepon = new OfficerClientWepon(officer, client,wepon,action);
     }
-    public void clickDeleteSelectedNote(){
+
+    public void clickDeleteSelectedNote() {
         int index = StatusTabelView.getSelectionModel().getSelectedIndex();
-        if (index != -1){
+        if (index != -1) {
             officerClientWepons.remove(index);
             officerClientWeponGateway.delete(index);
         }
@@ -379,7 +378,6 @@ public class StackController {
         ActionPanel.setVisible(false);
         ActionPanel.setDisable(true);
         typeOfVisitOneRB.setSelected(true);
-        ClientTB.setCellValueFactory(item -> item.getValue().clientProperty());
         OfficerTB.setCellValueFactory(item -> item.getValue().officerProperty());
         WeponTB.setCellValueFactory(item -> item.getValue().weponProperty());
         StatusTB.setCellValueFactory(item -> item.getValue().actionProperty());
