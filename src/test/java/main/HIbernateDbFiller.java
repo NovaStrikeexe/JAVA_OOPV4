@@ -34,7 +34,6 @@ public class HIbernateDbFiller {
 
         /*TODO ACTION DB*/
         Action action1 = new Action();
-        Action action2 = new Action();
 
         clientHibernateGateway.insert(client1);
         clientHibernateGateway.insert(client2);

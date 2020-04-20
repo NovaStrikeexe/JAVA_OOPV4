@@ -6,22 +6,12 @@ import javafx.beans.property.StringProperty;
 import javax.persistence.*;
 
 @Entity
-@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 @Access(AccessType.PROPERTY)
 public class Officer extends Human {
-    private int id;
     private StringProperty WorkExperience = new SimpleStringProperty();
     private StringProperty WorkSchedule = new SimpleStringProperty();
 
-    @Id
-    @GeneratedValue(generator="sqlite_officer")
-    @Override
-    public int getId() {
-        return id;
-    }
 
-    @Override
-    public void setId(int id) { }
 
     public void setWorkExperience(String WorkExperience) {
         this.WorkExperience.set(WorkExperience);

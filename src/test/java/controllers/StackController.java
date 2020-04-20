@@ -11,6 +11,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.layout.Pane;
 import models.*;
+import registry.GatewayRegestry;
 
 public class StackController {
     @FXML
@@ -74,19 +75,25 @@ public class StackController {
     @FXML
     Button ToOfficer;
     @FXML
-    ComboBox<String> clientComboBox;
+    ComboBox<Client> clientComboBox;
     @FXML
-    ComboBox<String> officerComboBox;
+    ComboBox<Officer> officerComboBox;
     @FXML
-    ComboBox<String> weponComboBox;
+    ComboBox<Wepon> weponComboBox;
 
 
     @FXML
     Gateway<Client> clientGateway = new ClientHibernateGateway();
+    ObservableList<Client> clientHb = FXCollections.observableArrayList(clientGateway.all());
     @FXML
     Gateway<Officer> officerGateway = new OfficerHibernateGateway();
+    ObservableList<Officer> officerHb = FXCollections.observableArrayList(officerGateway.all());
     @FXML
     Gateway<Wepon> weponGateway = new WeponHibernateGateway();
+    ObservableList<Wepon> weponsHb = FXCollections.observableArrayList(weponGateway.all());
+    @FXML
+    Gateway<Action> actionGateway = new ActionHibernateGateway();
+    ObservableList<Action> actionsHb = FXCollections.observableArrayList(actionGateway.all());
     @FXML
     Gateway<OfficerClientWepon> officerClientWeponGateway = new OFCLNWPHIbernateGateway();
     ObservableList<OfficerClientWepon> officerClientWepons = FXCollections.observableArrayList(officerClientWeponGateway.all());
@@ -139,10 +146,12 @@ public class StackController {
             alert.showAndWait();
         }
         if (flag3 == 3) {
+            WeponHibernateGateway weponHibernateGateway = (WeponHibernateGateway) GatewayRegestry.getInstance().getWeponGateway();
             wepon = new Wepon(mark, calibr, ammo);
             MarkOfWeponTF.clear();
             CalibrOfWeponTF.clear();
             AmmoTF.clear();
+            weponHibernateGateway.insert(wepon);
             AddWepon.setDisable(true);
             ToListOfAction.isFocused();
 
@@ -215,6 +224,7 @@ public class StackController {
             flag++;
         }
         if (flag == 5) {
+            OfficerHibernateGateway officerHibernateGateway = (OfficerHibernateGateway) GatewayRegestry.getInstance().getOfficerGateway();
             officer = new Officer(name, sName, age, workExp, workSch);
             NameOfficerTF.clear();
             SNameOfficerTF.clear();
@@ -222,6 +232,7 @@ public class StackController {
             WorkExperience.clear();
             WorkSchedule.clear();
             clickAddOfficer.setDisable(true);
+            officerHibernateGateway.insert(officer);
             toWepon.requestFocus();
 
         } else {
@@ -279,6 +290,7 @@ public class StackController {
         }
 
         if (flag == 3) {
+            ClientHibernateGateway clientHibernateGateway = (ClientHibernateGateway) GatewayRegestry.getInstance().getClientGateway();
             client = new Client(name, sName, age, type);
             nameOfClientTF.clear();
             secondnameOfClient.clear();
@@ -286,6 +298,7 @@ public class StackController {
             clickAddClient.setDisable(true);
             ToOfficer.setDisable(false);
             ToOfficer.requestFocus();
+            clientHibernateGateway.insert(client);
         } else {
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setHeaderText("Add_client_Error");
@@ -363,6 +376,34 @@ public class StackController {
         }
     }
 
+   public void isSelectedClient(){
+        Client clientSelected = clientComboBox.getSelectionModel().getSelectedItem();
+        nameOfClientTF.textProperty().set(clientSelected.getNameofhumanStr());
+        secondnameOfClient.textProperty().set(clientSelected.getSnameofhumanStr());
+        ageOfClient.textProperty().set(String.valueOf(clientSelected.getAgeofhumanInt()));
+        if(clientSelected.gettypeOfVisistBool()){
+            typeOfVisitOneRB.isSelected();
+        }
+        else {
+            typeOfVisitAllRB.isSelected();
+        }
+
+    }
+    public void isSelectedOfficer(){
+        Officer officerSelected = officerComboBox.getSelectionModel().getSelectedItem();
+        NameOfficerTF.textProperty().set(officerSelected.getNameofhumanStr());
+        SNameOfficerTF.textProperty().set(officerSelected.getSnameofhumanStr());
+        AgeOfOfficerTF.textProperty().set(String.valueOf(officerSelected.getAgeofhumanInt()));
+        WorkExperience.textProperty().set(officerSelected.getWorkExperienceStr());
+        WorkSchedule.textProperty().set(officerSelected.getWorkScheduleStr());
+    }
+    public void isSelectedWepon(){
+        Wepon weponSelected  = weponComboBox.getSelectionModel().getSelectedItem();
+        MarkOfWeponTF.textProperty().set(weponSelected.getMark());
+        CalibrOfWeponTF.textProperty().set(String.valueOf(weponSelected.getCalibr()));
+        AmmoTF.textProperty().set(String.valueOf(weponSelected.getAmmo()));
+    }
+
     @FXML
     public void initialize() {
         ClientPanel.setVisible(true);
@@ -379,6 +420,10 @@ public class StackController {
         WeponTB.setCellValueFactory(item -> item.getValue().weponProperty());
         StatusTB.setCellValueFactory(item -> item.getValue().actionProperty());
         StatusTabelView.setItems(officerClientWepons);
+
+        clientComboBox.setItems(clientHb);
+        officerComboBox.setItems(officerHb);
+        weponComboBox.setItems(weponsHb);
 
 
         if ((nameOfClientTF.getText().isEmpty()) && (secondnameOfClient.getText().isEmpty()) && (ageOfClient.getText().isEmpty())) {

@@ -8,7 +8,6 @@ import javafx.beans.property.SimpleObjectProperty;
 import javax.persistence.*;
 
 @Entity
-@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 @Access(AccessType.PROPERTY)
 public class OfficerClientWepon implements EntityClass {
     private int id;
@@ -77,7 +76,7 @@ public class OfficerClientWepon implements EntityClass {
     }
 
     @Id
-    @GeneratedValue(generator="sqlite_officerClientWepon")
+    @GeneratedValue(generator="gen_officerClientWepon")
     @Override
     public int getId() {
         return id;

@@ -6,9 +6,8 @@ import javafx.beans.property.StringProperty;
 
 import javax.persistence.*;
 @Entity
-@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 public class Action implements EntityClass {
-    private int id; //Does it needed?
+    private int id;
     private StringProperty name = new SimpleStringProperty();
 
     private Action(String n) {
@@ -29,7 +28,7 @@ public class Action implements EntityClass {
     }
 
     @Id
-    @GeneratedValue(generator="sqlite_action")
+    @GeneratedValue(generator="gen_action")
     @Override
     public int getId() {
         return id;

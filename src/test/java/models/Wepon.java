@@ -6,7 +6,6 @@ import javafx.beans.property.*;
 import javax.persistence.*;
 
 @Entity
-@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 @Access(AccessType.PROPERTY)
 public class Wepon implements EntityClass {
     private int id;
@@ -15,13 +14,13 @@ public class Wepon implements EntityClass {
     private IntegerProperty ammo = new SimpleIntegerProperty();
 
     @Id
-    @GeneratedValue(generator="sqlite_wepon")
+    @GeneratedValue(generator="gen_wepon")
     public int getId() {
         return id;
     }
 
     @Override
-    public void setId(int id) { }
+    public void setId(int id) {this.id = id;}
 
     public String getMark() {
         return mark.get();
@@ -46,7 +45,7 @@ public class Wepon implements EntityClass {
     public void setCalibr(float calibr) {
         this.calibr.set(calibr);
     }
-    @Transient
+
     public int getAmmo() {
         return ammo.get();
     }

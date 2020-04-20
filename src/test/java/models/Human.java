@@ -7,12 +7,11 @@ import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
 import javax.persistence.*;
-
-@MappedSuperclass
+@Entity
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 @Access(AccessType.PROPERTY)
-public class Human implements EntityClass {
-    private int id;
+public abstract class Human implements EntityClass {
+    public int id;
     protected StringProperty nameofhuman = new SimpleStringProperty();
     protected StringProperty snameofhuman = new SimpleStringProperty();
     protected IntegerProperty ageofhuman = new SimpleIntegerProperty();
@@ -21,13 +20,23 @@ public class Human implements EntityClass {
 
     public void setId(int id) { this.id = id; }
 
-    public void setNameofhuman(String nameofhuman) {
+    public void setNameofhumanStr(String nameofhuman) {
         this.nameofhuman.set(nameofhuman);
     }
 
-    public void setSnameofhuman(String snameofhuman) { this.snameofhuman.set(snameofhuman); }
+    public void setSnameofhumanStr(String snameofhuman) { this.snameofhuman.set(snameofhuman); }
 
-    public void setAgeofhuman(Integer ageofhuman) { this.ageofhuman.set(ageofhuman); }
+    public void setAgeofhumanInt(Integer ageofhuman) { this.ageofhuman.set(ageofhuman); }
+
+    public String getNameofhumanStr() {
+        return nameofhuman.get();
+    }
+    public String getSnameofhumanStr() {
+        return snameofhuman.get();
+    }
+    public Integer getAgeofhumanInt() {
+        return ageofhuman.get();
+    }
 
     @Transient
     public StringProperty getNameofhuman() {
@@ -42,19 +51,20 @@ public class Human implements EntityClass {
         return ageofhuman;
     }
     @Id
-    @GeneratedValue(generator="sqlite_human")
+    @GeneratedValue(generator="gen_human")
     @Override
     public int getId() { return id; }
 
     public String toString(){
         return getShortName();
     }
-
-    private String getShortName() {
+    @Transient
+    public String getShortName() {
         return snameofhuman.get() + " " + nameofhuman.get().charAt(0);
     }
 
-    public Human(long id, StringProperty nameofhuman, StringProperty snameofhuman, IntegerProperty ageofhuman) {
+
+    public Human(int id, StringProperty nameofhuman, StringProperty snameofhuman, IntegerProperty ageofhuman) {
         this.nameofhuman = nameofhuman;
         this.snameofhuman = snameofhuman;
         this.ageofhuman = ageofhuman;

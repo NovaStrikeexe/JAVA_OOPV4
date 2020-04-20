@@ -10,7 +10,6 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        //AnchorPane root = (AnchorPane) FXMLLoader.load(Main.class.getResource("/Views/Arrmory.fxml"));
         Parent root = FXMLLoader.load(getClass().getResource("../Views/Arrmory.fxml"));
         primaryStage.setScene(new Scene(root,600,380));
         primaryStage.setResizable(false);

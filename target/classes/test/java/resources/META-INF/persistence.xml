@@ -21,7 +21,7 @@
             <property name="format_sql" value="true" />
             <property name="hibernate.flushMode" value="ALWAYS" />
             <property name="hibernate.connection.charSet" value="UTF-8" />
-            <property name="hibernate.hbm2ddl.auto" value="create" />
+            <property name="hibernate.hbm2ddl.auto" value="validate" />
         </properties>
     </persistence-unit>
 </persistence>

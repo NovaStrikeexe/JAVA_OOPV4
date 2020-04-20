@@ -8,20 +8,8 @@ import javafx.beans.property.StringProperty;
 import javax.persistence.*;
 
 @Entity
-@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 @Access(AccessType.PROPERTY)
 public class Client extends Human {
-    private int id;
-    @Id
-    @GeneratedValue(generator="sqlite_client")
-    @Override
-    public int getId() {
-        return id;
-    }
-
-    @Override
-    public void setId(int id) {
-    }
 
     private BooleanProperty type_of_visit = new SimpleBooleanProperty();
 

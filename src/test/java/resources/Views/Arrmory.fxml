@@ -31,7 +31,7 @@
             <Button fx:id="ClearerClient" layoutX="102.0" layoutY="247.0" mnemonicParsing="false" onAction="#ClearerClient" text="Clear all" />
             <Button layoutX="14.0" layoutY="295.0" mnemonicParsing="false" text="Cancel" />
             <Button fx:id="ToOfficer" layoutX="93.0" layoutY="295.0" mnemonicParsing="false" onAction="#toOfficer" text="To Officer" />
-            <ComboBox fx:id="clientComboBox" layoutX="436.0" layoutY="42.0" prefWidth="150.0" />
+            <ComboBox fx:id="clientComboBox" layoutX="436.0" layoutY="42.0" onAction="#isSelectedClient" prefWidth="150.0" />
             <Label layoutX="436.0" layoutY="25.0" text="Choosing from a client base:" />
          </children>
       </Pane>
@@ -51,7 +51,7 @@
             <Label layoutX="14.0" layoutY="118.0" text="Age of Officer:" />
             <Label layoutX="12.0" layoutY="154.0" text="Work Experience:" />
             <Label layoutX="16.0" layoutY="192.0" text="Work Schedule:" />
-            <ComboBox fx:id="officerComboBox" layoutX="437.0" layoutY="78.0" prefWidth="150.0" />
+            <ComboBox fx:id="officerComboBox" layoutX="437.0" layoutY="78.0" onAction="#isSelectedOfficer" prefWidth="150.0" />
             <Label layoutX="436.0" layoutY="52.0" text="Choice from the officer base:" />
          </children>
       </Pane>
@@ -73,7 +73,7 @@
                </toggleGroup>
             </RadioButton>
             <RadioButton fx:id="backedRb" layoutX="15.0" layoutY="223.0" mnemonicParsing="false" prefHeight="8.0" prefWidth="87.0" text="Backed" toggleGroup="$ActionTG" />
-            <ComboBox fx:id="weponComboBox" layoutX="436.0" layoutY="59.0" prefWidth="150.0" />
+            <ComboBox fx:id="weponComboBox" layoutX="436.0" layoutY="59.0" onAction="#isSelectedWepon" prefWidth="150.0" />
             <Label layoutX="436.0" layoutY="42.0" text="The choice of weapons base:" />
          </children>
       </Pane>
