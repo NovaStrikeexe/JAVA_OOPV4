@@ -2,21 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b2846a23-7fe8-4f6e-b6b8-c8ad7d27378e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/controllers/StackController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/controllers/StackController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/main/HIbernateDbFiller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/main/HIbernateDbFiller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/main/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/models/Action.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/models/Action.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/models/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/models/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/models/Human.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/models/Human.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/models/Officer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/models/Officer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/models/OfficerClientWepon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/models/OfficerClientWepon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/models/Wepon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/models/Wepon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/resources/META-INF/persistence.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/resources/Views/Arrmory.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/resources/Views/Arrmory.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/persistence.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Views/Arrmory.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Views/Arrmory.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/controllers/StackController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controllers/StackController$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/controllers/StackController$10.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controllers/StackController$10.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/controllers/StackController$11.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controllers/StackController$11.class" afterDir="false" />
@@ -29,16 +15,7 @@
       <change beforePath="$PROJECT_DIR$/target/classes/controllers/StackController$8.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controllers/StackController$8.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/controllers/StackController$9.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controllers/StackController$9.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/controllers/StackController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controllers/StackController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/HIbernateDbFiller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/HIbernateDbFiller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/models/Action.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/models/Action.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/models/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/models/Client.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/models/Human.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/models/Human.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/models/Officer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/models/Officer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/models/OfficerClientWepon.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/models/OfficerClientWepon.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/models/Wepon.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/models/Wepon.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/test/java/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/test/java/resources/META-INF/persistence.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wepons.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wepons.db" beforeDir="false" afterPath="$PROJECT_DIR$/wepons.db" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -149,7 +126,8 @@
       <workItem from="1587314217647" duration="600000" />
       <workItem from="1587337776133" duration="1545000" />
       <workItem from="1587344272969" duration="1601000" />
-      <workItem from="1587367241327" duration="14205000" />
+      <workItem from="1587367241327" duration="14399000" />
+      <workItem from="1587394235773" duration="320000" />
     </task>
     <servers />
   </component>
@@ -197,22 +175,22 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="669" y="174" key="#console.sql/0.0.1920.1050/1920.21.1680.1020@0.0.1920.1050" timestamp="1587382159474" />
-    <state width="1877" height="270" key="GridCell.Tab.0.bottom" timestamp="1587385754542">
+    <state width="1877" height="270" key="GridCell.Tab.0.bottom" timestamp="1587386081839">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="270" key="GridCell.Tab.0.bottom/0.0.1920.1050/1920.21.1680.1020@0.0.1920.1050" timestamp="1587385754542" />
-    <state width="1877" height="270" key="GridCell.Tab.0.center" timestamp="1587385754541">
+    <state width="1877" height="270" key="GridCell.Tab.0.bottom/0.0.1920.1050/1920.21.1680.1020@0.0.1920.1050" timestamp="1587386081839" />
+    <state width="1877" height="270" key="GridCell.Tab.0.center" timestamp="1587386081839">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="270" key="GridCell.Tab.0.center/0.0.1920.1050/1920.21.1680.1020@0.0.1920.1050" timestamp="1587385754541" />
-    <state width="1877" height="270" key="GridCell.Tab.0.left" timestamp="1587385754541">
+    <state width="1877" height="270" key="GridCell.Tab.0.center/0.0.1920.1050/1920.21.1680.1020@0.0.1920.1050" timestamp="1587386081839" />
+    <state width="1877" height="270" key="GridCell.Tab.0.left" timestamp="1587386081838">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="270" key="GridCell.Tab.0.left/0.0.1920.1050/1920.21.1680.1020@0.0.1920.1050" timestamp="1587385754541" />
-    <state width="1877" height="270" key="GridCell.Tab.0.right" timestamp="1587385754542">
+    <state width="1877" height="270" key="GridCell.Tab.0.left/0.0.1920.1050/1920.21.1680.1020@0.0.1920.1050" timestamp="1587386081838" />
+    <state width="1877" height="270" key="GridCell.Tab.0.right" timestamp="1587386081839">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="270" key="GridCell.Tab.0.right/0.0.1920.1050/1920.21.1680.1020@0.0.1920.1050" timestamp="1587385754542" />
+    <state width="1877" height="270" key="GridCell.Tab.0.right/0.0.1920.1050/1920.21.1680.1020@0.0.1920.1050" timestamp="1587386081839" />
     <state width="1877" height="243" key="GridCell.Tab.1.bottom" timestamp="1587381383465">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
