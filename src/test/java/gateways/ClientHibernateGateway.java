@@ -1,4 +1,5 @@
 package gateways;
 
-public class ClientHibernateGateway {
+import models.Client;
+public class ClientHibernateGateway extends SimpleHibernateGateway<Client> {
 }

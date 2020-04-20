@@ -1,12 +1,13 @@
 package models;
 
+import gateways.EntityClass;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
 import javax.persistence.*;
 @Entity
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
-public class Action {
+public class Action implements EntityClass {
     private int id; //Does it needed?
     private StringProperty name = new SimpleStringProperty();
 
@@ -25,6 +26,18 @@ public class Action {
 
     public static Action getBacking() {
         return new Action("Backed");
+    }
+
+    @Id
+    @GeneratedValue(generator="sqlite_action")
+    @Override
+    public int getId() {
+        return id;
+    }
+
+    @Override
+    public void setId(int id) {
+        this.id = id;
     }
 }
 

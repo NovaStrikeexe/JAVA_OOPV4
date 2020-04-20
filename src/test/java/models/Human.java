@@ -42,7 +42,8 @@ public class Human implements EntityClass {
         return ageofhuman;
     }
     @Id
-    @GeneratedValue(generator="sqlite_person")
+    @GeneratedValue(generator="sqlite_human")
+    @Override
     public int getId() { return id; }
 
     public String toString(){

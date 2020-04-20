@@ -10,13 +10,7 @@ import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.layout.Pane;
-import javafx.stage.Stage;
-import Main.Main;
 import models.*;
-
-import registry.GatewayRegestry;
-
-import java.io.IOException;
 
 public class StackController {
     @FXML
@@ -79,15 +73,22 @@ public class StackController {
     Button ToListOfAction;
     @FXML
     Button ToOfficer;
+    @FXML
+    ComboBox<String> clientComboBox;
+    @FXML
+    ComboBox<String> officerComboBox;
+    @FXML
+    ComboBox<String> weponComboBox;
+
 
     @FXML
-    Gateway<Client> clientGateway = new ClientGateway();
+    Gateway<Client> clientGateway = new ClientHibernateGateway();
     @FXML
-    Gateway<Officer> officerGateway = new OfficerGateway();
+    Gateway<Officer> officerGateway = new OfficerHibernateGateway();
     @FXML
-    Gateway<Wepon> weponGateway = new WeponGateway();
+    Gateway<Wepon> weponGateway = new WeponHibernateGateway();
     @FXML
-    Gateway<OfficerClientWepon> officerClientWeponGateway = new OfficerClientWeponGateway();
+    Gateway<OfficerClientWepon> officerClientWeponGateway = new OFCLNWPHIbernateGateway();
     ObservableList<OfficerClientWepon> officerClientWepons = FXCollections.observableArrayList(officerClientWeponGateway.all());
     Client client;
     Officer officer;
@@ -229,11 +230,7 @@ public class StackController {
             alert.setContentText("Check all fiends for filling");
             alert.showAndWait();
         }
-
-
     }
-
-
     public void ClearerOfficer() {
         NameOfficerTF.clear();
         SNameOfficerTF.clear();
@@ -341,7 +338,6 @@ public class StackController {
         OfficerClientWepon officerClientWepon = new OfficerClientWepon(officer, client, wepon, action);
         officerClientWepons.add(officerClientWepon);
 
-        /*TODO REWORKED class officerClientWepon*/
     }
 
     public void clickAddNewNote() {
@@ -378,6 +374,7 @@ public class StackController {
         ActionPanel.setVisible(false);
         ActionPanel.setDisable(true);
         typeOfVisitOneRB.setSelected(true);
+        ClientTB.setCellValueFactory(item -> item.getValue().clientProperty());
         OfficerTB.setCellValueFactory(item -> item.getValue().officerProperty());
         WeponTB.setCellValueFactory(item -> item.getValue().weponProperty());
         StatusTB.setCellValueFactory(item -> item.getValue().actionProperty());

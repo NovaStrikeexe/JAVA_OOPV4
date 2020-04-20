@@ -1,4 +1,6 @@
 package gateways;
 
-public class WeponHibernateGateway {
+
+import models.Wepon;
+public class WeponHibernateGateway extends SimpleHibernateGateway<Wepon> {
 }

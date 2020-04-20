@@ -1,4 +1,5 @@
 package gateways;
 
-public class OfficerHibernateGateway {
+import models.Officer;
+public class OfficerHibernateGateway extends SimpleHibernateGateway<Officer> {
 }

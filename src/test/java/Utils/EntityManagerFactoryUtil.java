@@ -11,7 +11,7 @@ public class EntityManagerFactoryUtil {
 
     public static EntityManager geteEntityManager() {
         if (factory == null)
-            factory = Persistence.createEntityManagerFactory("Wepons" );
+            factory = Persistence.createEntityManagerFactory("Wepon_Ar" );
         return factory.createEntityManager();
     }
 }

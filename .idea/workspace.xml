@@ -2,26 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b2846a23-7fe8-4f6e-b6b8-c8ad7d27378e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/JAVA_OOPV4.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Utils/EntityManagerFactoryUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/gateways/EntityClass.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/gateways/SimpleHibernateGateway.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/persistence.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/JAVA_OOPV4.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/JAVA_OOPV4.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gateways/Gateway.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gateways/Gateway.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gateways/SimpleGateway.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gateways/SimpleGateway.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/Action.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Action.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/EntityClass.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/Human.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Human.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/Officer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Officer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/OfficerClientWepon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/OfficerClientWepon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/ShootingRange.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/ShootingRange.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/Wepon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Wepon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Utils/EntityManagerFactoryUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Utils/EntityManagerFactoryUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/controllers/StackController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/controllers/StackController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/gateways/ActionHibernateGateway.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/gateways/ActionHibernateGateway.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/gateways/ClientHibernateGateway.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/gateways/ClientHibernateGateway.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/gateways/OFCLNWPHIbernateGateway.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/gateways/OFCLNWPHIbernateGateway.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/gateways/OfficerHibernateGateway.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/gateways/OfficerHibernateGateway.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/gateways/WeponHibernateGateway.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/gateways/WeponHibernateGateway.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/main/HIbernateDbFiller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/main/HIbernateDbFiller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/models/Action.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/models/Action.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/models/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/models/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/models/Human.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/models/Human.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/models/Officer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/models/Officer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/models/OfficerClientWepon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/models/OfficerClientWepon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/models/Wepon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/models/Wepon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/registry/GatewayRegestry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/registry/GatewayRegestry.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/resources/META-INF/persistence.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/resources/Views/Arrmory.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/resources/Views/Arrmory.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,6 +55,36 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+      <recent name="java" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\GIT\JAVA_OOPV4\src\test\java\resources\Views" />
+      <recent name="D:\GIT\JAVA_OOPV4\src\test\java\resources\META-INF" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="main.Main" />
+      <module name="JAVA_OOPV4" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="main.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -69,6 +100,19 @@
       <workItem from="1586493216279" duration="1608000" />
       <workItem from="1586495053743" duration="3522000" />
       <workItem from="1586502846608" duration="6952000" />
+      <workItem from="1586746773649" duration="7817000" />
+      <workItem from="1586805650257" duration="880000" />
+      <workItem from="1586851353254" duration="4403000" />
+      <workItem from="1586870122256" duration="355000" />
+      <workItem from="1587019872518" duration="5072000" />
+      <workItem from="1587031113087" duration="1012000" />
+      <workItem from="1587097979987" duration="9331000" />
+      <workItem from="1587225347202" duration="2545000" />
+      <workItem from="1587306906112" duration="834000" />
+      <workItem from="1587313670543" duration="527000" />
+      <workItem from="1587314217647" duration="600000" />
+      <workItem from="1587337776133" duration="1545000" />
+      <workItem from="1587344272969" duration="617000" />
     </task>
     <servers />
   </component>
@@ -76,33 +120,100 @@
     <option name="version" value="2" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="440" y="168" key="#Project_Structure" timestamp="1586494118508">
+    <state x="859" y="416" key="#Assign_Data_Sources" timestamp="1587107534852">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="440" y="168" key="#Project_Structure/0.0.1920.1050/1920.21.1680.1020@0.0.1920.1050" timestamp="1586494118508" />
-    <state x="414" y="180" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1586493581854">
+    <state x="859" y="416" key="#Assign_Data_Sources/0.0.1920.1050/1920.21.1680.1020@0.0.1920.1050" timestamp="1587107534852" />
+    <state x="440" y="168" key="#Project_Structure" timestamp="1586775129415">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="414" y="180" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1050/1920.21.1680.1020@0.0.1920.1050" timestamp="1586493581854" />
-    <state x="765" y="241" key="#com.intellij.ide.util.MemberChooser" timestamp="1586509586373">
+    <state x="440" y="168" key="#Project_Structure/0.0.1920.1050/1920.21.1680.1020@0.0.1920.1050" timestamp="1586775129415" />
+    <state x="414" y="180" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1586851436999">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="765" y="241" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1050/1920.21.1680.1020@0.0.1920.1050" timestamp="1586509586373" />
-    <state x="743" y="394" width="433" height="268" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1586507478064">
+    <state x="414" y="180" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1050/1920.21.1680.1020@0.0.1920.1050" timestamp="1586851436999" />
+    <state x="765" y="241" key="#com.intellij.ide.util.MemberChooser" timestamp="1587114869125">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="743" y="394" width="433" height="268" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1920.1050/1920.21.1680.1020@0.0.1920.1050" timestamp="1586507478064" />
+    <state x="765" y="241" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1050/1920.21.1680.1020@0.0.1920.1050" timestamp="1587114869125" />
+    <state x="782" y="449" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1586851497432">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="782" y="449" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1920.1050/1920.21.1680.1020@0.0.1920.1050" timestamp="1586851497432" />
+    <state x="743" y="394" width="433" height="268" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1586806033030">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="743" y="394" width="433" height="268" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1920.1050/1920.21.1680.1020@0.0.1920.1050" timestamp="1586806033030" />
+    <state x="756" y="406" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages" timestamp="1586806087410">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="756" y="406" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/0.0.1920.1050/1920.21.1680.1020@0.0.1920.1050" timestamp="1586806087410" />
     <state x="690" y="272" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1586495225879">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="690" y="272" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1050/1920.21.1680.1020@0.0.1920.1050" timestamp="1586495225879" />
+    <state width="938" height="285" key="GridCell.Tab.0.bottom" timestamp="1587339329232">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="938" height="285" key="GridCell.Tab.0.bottom/0.0.1920.1050/1920.21.1680.1020@0.0.1920.1050" timestamp="1587339329232" />
+    <state width="938" height="285" key="GridCell.Tab.0.center" timestamp="1587339329232">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="938" height="285" key="GridCell.Tab.0.center/0.0.1920.1050/1920.21.1680.1020@0.0.1920.1050" timestamp="1587339329232" />
+    <state width="938" height="285" key="GridCell.Tab.0.left" timestamp="1587339329232">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="938" height="285" key="GridCell.Tab.0.left/0.0.1920.1050/1920.21.1680.1020@0.0.1920.1050" timestamp="1587339329232" />
+    <state width="938" height="285" key="GridCell.Tab.0.right" timestamp="1587339329232">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="938" height="285" key="GridCell.Tab.0.right/0.0.1920.1050/1920.21.1680.1020@0.0.1920.1050" timestamp="1587339329232" />
+    <state width="1877" height="352" key="GridCell.Tab.1.bottom" timestamp="1587030487372">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="352" key="GridCell.Tab.1.bottom/0.0.1920.1050/1920.21.1680.1020@0.0.1920.1050" timestamp="1587030487372" />
+    <state width="1877" height="352" key="GridCell.Tab.1.center" timestamp="1587030487371">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="352" key="GridCell.Tab.1.center/0.0.1920.1050/1920.21.1680.1020@0.0.1920.1050" timestamp="1587030487371" />
+    <state width="1877" height="352" key="GridCell.Tab.1.left" timestamp="1587030487371">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="352" key="GridCell.Tab.1.left/0.0.1920.1050/1920.21.1680.1020@0.0.1920.1050" timestamp="1587030487371" />
+    <state width="1877" height="352" key="GridCell.Tab.1.right" timestamp="1587030487372">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="352" key="GridCell.Tab.1.right/0.0.1920.1050/1920.21.1680.1020@0.0.1920.1050" timestamp="1587030487372" />
     <state x="490" y="180" key="Maven.ArtifactSearchDialog" timestamp="1586504692028">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="490" y="180" key="Maven.ArtifactSearchDialog/0.0.1920.1050/1920.21.1680.1020@0.0.1920.1050" timestamp="1586504692028" />
+    <state x="440" y="99" key="SettingsEditor" timestamp="1586851910991">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="440" y="99" key="SettingsEditor/0.0.1920.1050/1920.21.1680.1020@0.0.1920.1050" timestamp="1586851910991" />
     <state x="656" y="349" key="com.intellij.ide.util.TipDialog" timestamp="1586493213367">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="656" y="349" key="com.intellij.ide.util.TipDialog/0.0.1920.1050/1920.21.1680.1020@0.0.1920.1050" timestamp="1586493213367" />
+    <state x="803" y="282" key="refactoring.ChangeSignatureDialog" timestamp="1586851811630">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="803" y="282" key="refactoring.ChangeSignatureDialog/0.0.1920.1050/1920.21.1680.1020@0.0.1920.1050" timestamp="1586851811630" />
+    <state x="616" y="243" key="run.anything.popup" timestamp="1586771316585">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="616" y="243" key="run.anything.popup/0.0.1920.1050/1920.21.1680.1020@0.0.1920.1050" timestamp="1586771316585" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/controllers/StackController.java</url>
+          <line>337</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

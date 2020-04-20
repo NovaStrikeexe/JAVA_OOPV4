@@ -1,4 +1,5 @@
 package gateways;
 
-public class OFCLNWPHIbernateGateway {
+import models.OfficerClientWepon;
+public class OFCLNWPHIbernateGateway extends SimpleHibernateGateway<OfficerClientWepon> {
 }

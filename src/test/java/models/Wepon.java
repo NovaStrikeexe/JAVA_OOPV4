@@ -21,8 +21,7 @@ public class Wepon implements EntityClass {
     }
 
     @Override
-    public void setId(int id) {
-    }
+    public void setId(int id) { }
 
     public String getMark() {
         return mark.get();

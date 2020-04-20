@@ -1,4 +1,4 @@
 package gateways;
-
-public class ActionHibernateGateway {
+import models.Action;
+public class ActionHibernateGateway extends SimpleHibernateGateway<Action> {
 }

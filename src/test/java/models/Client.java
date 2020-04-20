@@ -5,16 +5,15 @@ import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.SimpleBooleanProperty;
 import javafx.beans.property.StringProperty;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Inheritance;
-import javax.persistence.InheritanceType;
+import javax.persistence.*;
 
 @Entity
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+@Access(AccessType.PROPERTY)
 public class Client extends Human {
     private int id;
     @Id
+    @GeneratedValue(generator="sqlite_client")
     @Override
     public int getId() {
         return id;
@@ -34,12 +33,14 @@ public class Client extends Human {
         return super.toString();
     }
 
-
+    @Transient
     public BooleanProperty getTypeOfvisist() {
         return type_of_visit;
     }
+    public void settypeOfVisistBool(boolean typeOfVisistBool){ this.type_of_visit.set( typeOfVisistBool);}
+    public boolean gettypeOfVisistBool(){return type_of_visit.get();}
 
-
+    public Client(){}
     public Client(String nameofhuman, String snameofhuman, Integer ageofhuman, Boolean type_of_visit) {
         super();
         this.nameofhuman.set(nameofhuman);
