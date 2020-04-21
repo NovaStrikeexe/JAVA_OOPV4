@@ -1,6 +1,7 @@
 package controllers;
 
 
+import exceptions.EntityNotFound;
 import gateways.*;
 
 import javafx.beans.value.ChangeListener;
@@ -92,7 +93,7 @@ public class StackController {
     Gateway<Wepon> weponGateway = new WeponHibernateGateway();
     ObservableList<Wepon> weponsHb = FXCollections.observableArrayList(weponGateway.all());
     @FXML
-    Gateway<Action> actionGateway = new ActionHibernateGateway();
+    ActionGW actionGateway = GatewayRegestry.getInstance().getActionGateway();
     ObservableList<Action> actionsHb = FXCollections.observableArrayList(actionGateway.all());
     @FXML
     Gateway<OfficerClientWepon> officerClientWeponGateway = new OFCLNWPHIbernateGateway();
@@ -103,11 +104,12 @@ public class StackController {
     Action action;
 
 
-    public void clickAddWepon() {
+    public void clickAddWepon() throws EntityNotFound {
         String mark = "";
         Float calibr = null;
         int ammo = 0;
         int flag3 = 0;
+
         if (MarkOfWeponTF.getText().isEmpty()) {
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setHeaderText("Mark_Error");
@@ -135,23 +137,29 @@ public class StackController {
             ammo = Integer.parseInt(AmmoTF.getText());
             flag3++;
         }
+
         if (givenRb.isSelected()) {
-            action = Action.getGiving();
+            action = actionGateway.getGiven();
         } else if (backedRb.isSelected()) {
-            action = Action.getBacking();
+            action = actionGateway.getBacked();
         } else {
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setHeaderText("Action_Error");
             alert.setContentText("Action not given");
             alert.showAndWait();
+
         }
         if (flag3 == 3) {
             WeponHibernateGateway weponHibernateGateway = (WeponHibernateGateway) GatewayRegestry.getInstance().getWeponGateway();
-            wepon = new Wepon(mark, calibr, ammo);
+            wepon = weponComboBox.getSelectionModel().getSelectedItem();
+            if (wepon == null) {
+                wepon = new Wepon(mark, calibr, ammo);
+                weponHibernateGateway.insert(wepon);
+
+            }
             MarkOfWeponTF.clear();
             CalibrOfWeponTF.clear();
             AmmoTF.clear();
-            weponHibernateGateway.insert(wepon);
             AddWepon.setDisable(true);
             ToListOfAction.isFocused();
 
@@ -225,14 +233,18 @@ public class StackController {
         }
         if (flag == 5) {
             OfficerHibernateGateway officerHibernateGateway = (OfficerHibernateGateway) GatewayRegestry.getInstance().getOfficerGateway();
-            officer = new Officer(name, sName, age, workExp, workSch);
+            officer = officerComboBox.getSelectionModel().getSelectedItem();
+            if (officer == null) {
+                officer = new Officer(name, sName, age, workExp, workSch);
+                officerHibernateGateway.insert(officer);
+                officerComboBox.setItems(officerHb);
+            }
             NameOfficerTF.clear();
             SNameOfficerTF.clear();
             AgeOfOfficerTF.clear();
             WorkExperience.clear();
             WorkSchedule.clear();
             clickAddOfficer.setDisable(true);
-            officerHibernateGateway.insert(officer);
             toWepon.requestFocus();
 
         } else {
@@ -242,6 +254,7 @@ public class StackController {
             alert.showAndWait();
         }
     }
+
     public void ClearerOfficer() {
         NameOfficerTF.clear();
         SNameOfficerTF.clear();
@@ -291,14 +304,19 @@ public class StackController {
 
         if (flag == 3) {
             ClientHibernateGateway clientHibernateGateway = (ClientHibernateGateway) GatewayRegestry.getInstance().getClientGateway();
-            client = new Client(name, sName, age, type);
+            client = clientComboBox.getSelectionModel().getSelectedItem();
+            if (client == null) {
+                client = new Client(name, sName, age, type);
+                clientHibernateGateway.insert(client);
+                clientHb.add(client);
+                //clientComboBox.setItems(clientHb);
+            }
             nameOfClientTF.clear();
             secondnameOfClient.clear();
             ageOfClient.clear();
             clickAddClient.setDisable(true);
             ToOfficer.setDisable(false);
             ToOfficer.requestFocus();
-            clientHibernateGateway.insert(client);
         } else {
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setHeaderText("Add_client_Error");
@@ -349,6 +367,7 @@ public class StackController {
         ActionPanel.setVisible(true);
         ActionPanel.setDisable(false);
         OfficerClientWepon officerClientWepon = new OfficerClientWepon(officer, client, wepon, action);
+        officerClientWeponGateway.insert(officerClientWepon);
         officerClientWepons.add(officerClientWepon);
 
     }
@@ -365,7 +384,7 @@ public class StackController {
 
         ActionPanel.setVisible(false);
         ActionPanel.setDisable(true);
-        OfficerClientWepon officerClientWepon = new OfficerClientWepon(officer, client,wepon,action);
+        OfficerClientWepon officerClientWepon = new OfficerClientWepon(officer, client, wepon, action);
     }
 
     public void clickDeleteSelectedNote() {
@@ -376,20 +395,20 @@ public class StackController {
         }
     }
 
-   public void isSelectedClient(){
+    public void isSelectedClient() {
         Client clientSelected = clientComboBox.getSelectionModel().getSelectedItem();
         nameOfClientTF.textProperty().set(clientSelected.getNameofhumanStr());
         secondnameOfClient.textProperty().set(clientSelected.getSnameofhumanStr());
         ageOfClient.textProperty().set(String.valueOf(clientSelected.getAgeofhumanInt()));
-        if(clientSelected.gettypeOfVisistBool()){
-            typeOfVisitOneRB.isSelected();
-        }
-        else {
-            typeOfVisitAllRB.isSelected();
+        if (clientSelected.gettypeOfVisistBool()) {
+            typeOfVisitOneRB.setSelected(true);
+        } else {
+            typeOfVisitAllRB.setSelected(true);
         }
 
     }
-    public void isSelectedOfficer(){
+
+    public void isSelectedOfficer() {
         Officer officerSelected = officerComboBox.getSelectionModel().getSelectedItem();
         NameOfficerTF.textProperty().set(officerSelected.getNameofhumanStr());
         SNameOfficerTF.textProperty().set(officerSelected.getSnameofhumanStr());
@@ -397,8 +416,9 @@ public class StackController {
         WorkExperience.textProperty().set(officerSelected.getWorkExperienceStr());
         WorkSchedule.textProperty().set(officerSelected.getWorkScheduleStr());
     }
-    public void isSelectedWepon(){
-        Wepon weponSelected  = weponComboBox.getSelectionModel().getSelectedItem();
+
+    public void isSelectedWepon() {
+        Wepon weponSelected = weponComboBox.getSelectionModel().getSelectedItem();
         MarkOfWeponTF.textProperty().set(weponSelected.getMark());
         CalibrOfWeponTF.textProperty().set(String.valueOf(weponSelected.getCalibr()));
         AmmoTF.textProperty().set(String.valueOf(weponSelected.getAmmo()));

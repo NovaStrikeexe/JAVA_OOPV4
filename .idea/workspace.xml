@@ -2,7 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b2846a23-7fe8-4f6e-b6b8-c8ad7d27378e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/java/gateways/ActionGW.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/controllers/StackController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/controllers/StackController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/gateways/ActionHibernateGateway.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/gateways/ActionHibernateGateway.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/main/HIbernateDbFiller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/main/HIbernateDbFiller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/registry/GatewayRegestry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/registry/GatewayRegestry.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Views/Arrmory.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Views/Arrmory.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/controllers/StackController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controllers/StackController$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/controllers/StackController$10.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controllers/StackController$10.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/controllers/StackController$11.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controllers/StackController$11.class" afterDir="false" />
@@ -15,7 +21,8 @@
       <change beforePath="$PROJECT_DIR$/target/classes/controllers/StackController$8.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controllers/StackController$8.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/controllers/StackController$9.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controllers/StackController$9.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/controllers/StackController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controllers/StackController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wepons.db" beforeDir="false" afterPath="$PROJECT_DIR$/wepons.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/test/java/resources/Views/Arrmory.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/test/java/resources/Views/Arrmory.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wepons.db" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,8 +32,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -127,7 +134,8 @@
       <workItem from="1587337776133" duration="1545000" />
       <workItem from="1587344272969" duration="1601000" />
       <workItem from="1587367241327" duration="14399000" />
-      <workItem from="1587394235773" duration="320000" />
+      <workItem from="1587394235773" duration="471000" />
+      <workItem from="1587440410902" duration="4767000" />
     </task>
     <servers />
   </component>
@@ -175,38 +183,38 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="669" y="174" key="#console.sql/0.0.1920.1050/1920.21.1680.1020@0.0.1920.1050" timestamp="1587382159474" />
-    <state width="1877" height="270" key="GridCell.Tab.0.bottom" timestamp="1587386081839">
+    <state width="1877" height="32" key="GridCell.Tab.0.bottom" timestamp="1587445191722">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="270" key="GridCell.Tab.0.bottom/0.0.1920.1050/1920.21.1680.1020@0.0.1920.1050" timestamp="1587386081839" />
-    <state width="1877" height="270" key="GridCell.Tab.0.center" timestamp="1587386081839">
+    <state width="1877" height="32" key="GridCell.Tab.0.bottom/0.0.1920.1050/1920.21.1680.1020@0.0.1920.1050" timestamp="1587445191722" />
+    <state width="1877" height="32" key="GridCell.Tab.0.center" timestamp="1587445191722">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="270" key="GridCell.Tab.0.center/0.0.1920.1050/1920.21.1680.1020@0.0.1920.1050" timestamp="1587386081839" />
-    <state width="1877" height="270" key="GridCell.Tab.0.left" timestamp="1587386081838">
+    <state width="1877" height="32" key="GridCell.Tab.0.center/0.0.1920.1050/1920.21.1680.1020@0.0.1920.1050" timestamp="1587445191722" />
+    <state width="1877" height="32" key="GridCell.Tab.0.left" timestamp="1587445191721">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="270" key="GridCell.Tab.0.left/0.0.1920.1050/1920.21.1680.1020@0.0.1920.1050" timestamp="1587386081838" />
-    <state width="1877" height="270" key="GridCell.Tab.0.right" timestamp="1587386081839">
+    <state width="1877" height="32" key="GridCell.Tab.0.left/0.0.1920.1050/1920.21.1680.1020@0.0.1920.1050" timestamp="1587445191721" />
+    <state width="1877" height="32" key="GridCell.Tab.0.right" timestamp="1587445191722">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="270" key="GridCell.Tab.0.right/0.0.1920.1050/1920.21.1680.1020@0.0.1920.1050" timestamp="1587386081839" />
-    <state width="1877" height="243" key="GridCell.Tab.1.bottom" timestamp="1587381383465">
+    <state width="1877" height="32" key="GridCell.Tab.0.right/0.0.1920.1050/1920.21.1680.1020@0.0.1920.1050" timestamp="1587445191722" />
+    <state width="1877" height="32" key="GridCell.Tab.1.bottom" timestamp="1587445191722">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="243" key="GridCell.Tab.1.bottom/0.0.1920.1050/1920.21.1680.1020@0.0.1920.1050" timestamp="1587381383465" />
-    <state width="1877" height="243" key="GridCell.Tab.1.center" timestamp="1587381383465">
+    <state width="1877" height="32" key="GridCell.Tab.1.bottom/0.0.1920.1050/1920.21.1680.1020@0.0.1920.1050" timestamp="1587445191722" />
+    <state width="1877" height="32" key="GridCell.Tab.1.center" timestamp="1587445191722">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="243" key="GridCell.Tab.1.center/0.0.1920.1050/1920.21.1680.1020@0.0.1920.1050" timestamp="1587381383465" />
-    <state width="1877" height="243" key="GridCell.Tab.1.left" timestamp="1587381383465">
+    <state width="1877" height="32" key="GridCell.Tab.1.center/0.0.1920.1050/1920.21.1680.1020@0.0.1920.1050" timestamp="1587445191722" />
+    <state width="1877" height="32" key="GridCell.Tab.1.left" timestamp="1587445191722">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="243" key="GridCell.Tab.1.left/0.0.1920.1050/1920.21.1680.1020@0.0.1920.1050" timestamp="1587381383465" />
-    <state width="1877" height="243" key="GridCell.Tab.1.right" timestamp="1587381383465">
+    <state width="1877" height="32" key="GridCell.Tab.1.left/0.0.1920.1050/1920.21.1680.1020@0.0.1920.1050" timestamp="1587445191722" />
+    <state width="1877" height="32" key="GridCell.Tab.1.right" timestamp="1587445191722">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="243" key="GridCell.Tab.1.right/0.0.1920.1050/1920.21.1680.1020@0.0.1920.1050" timestamp="1587381383465" />
+    <state width="1877" height="32" key="GridCell.Tab.1.right/0.0.1920.1050/1920.21.1680.1020@0.0.1920.1050" timestamp="1587445191722" />
     <state width="196" height="457" key="HiddenNamespacesPopup" timestamp="1587381636971">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -235,18 +243,13 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/controllers/StackController.java</url>
-          <line>423</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/test/java/models/Human.java</url>
-          <line>61</line>
-          <properties class="models.Human" method="getShortName">
+          <url>file://$PROJECT_DIR$/src/test/java/controllers/StackController.java</url>
+          <line>397</line>
+          <properties class="controllers.StackController" method="isSelectedClient">
             <option name="EMULATED" value="true" />
           </properties>
-          <option name="timeStamp" value="3" />
+          <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

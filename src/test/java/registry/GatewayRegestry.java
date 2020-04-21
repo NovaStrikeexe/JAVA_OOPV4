@@ -3,13 +3,13 @@ import gateways.*;
 import models.*;
 
 public class GatewayRegestry {
-    private Gateway<Action> actionGateway = new ActionHibernateGateway();
+    private ActionGW actionGateway = new ActionHibernateGateway();
     private Gateway<Client> clientGateway = new ClientHibernateGateway();
     private Gateway<OfficerClientWepon> officerClientWeponGateway = new OFCLNWPHIbernateGateway();
     private Gateway<Officer> officerGateway = new OfficerHibernateGateway();
     private Gateway<Wepon> weponGateway = new WeponHibernateGateway();
 
-    public Gateway<Action> getActionGateway() {
+    public ActionGW getActionGateway() {
         return actionGateway;
     }
 

@@ -1,11 +1,14 @@
 package main;
 
+import Utils.EntityManagerFactoryUtil;
 import gateways.*;
 import models.Action;
 import models.Client;
 import models.Officer;
 import models.Wepon;
 import registry.GatewayRegestry;
+
+import javax.persistence.EntityManager;
 
 public class HIbernateDbFiller {
     public static void main(String[] args) {
@@ -33,7 +36,11 @@ public class HIbernateDbFiller {
         Wepon wepon5 = new Wepon("M417", (float) 0.338, 20);
 
         /*TODO ACTION DB*/
-        Action action1 = new Action();
+        EntityManager entityManager = EntityManagerFactoryUtil.geteEntityManager();
+        entityManager.getTransaction().begin();
+        entityManager.persist(Action.getGiving());
+        entityManager.persist(Action.getBacking());
+        entityManager.getTransaction().commit();
 
         clientHibernateGateway.insert(client1);
         clientHibernateGateway.insert(client2);
